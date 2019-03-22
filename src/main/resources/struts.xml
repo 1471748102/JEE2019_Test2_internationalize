@@ -5,5 +5,14 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-
+    <constant name="struts.custom.i18n.resources" value="msg"/>
+    <package name="hzw" extends="struts-default">
+        <action name="I18N" class="pac.InterNet">
+            <result name="input">/index.jsp</result>
+            <result name="output">/suc.jsp</result>
+        </action>
+        <action name="check" class="pac.Check">
+            <result name="ck">/index.jsp</result>
+        </action>
+    </package>
 </struts>
